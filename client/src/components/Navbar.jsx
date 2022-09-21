@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className='navbar navbar-expand-lg bg-light'>
       <div className='container d-flex justify-content-between'>
         <Link className='navbar-brand' to='/'>
-          Project Fenrir
+          Project Tyr
         </Link>
         <button
           className='navbar-toggler'
