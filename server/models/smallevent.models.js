@@ -23,6 +23,10 @@ const SmallEventSchema = new mongoose.Schema(
       type: Date,
       required: [true, "Meet must have a date"],
     },
+    meetLocation: {
+      type: String,
+      required: [true, "Meet must have a location"],
+    },
   },
   { timestamps: true }
 );
