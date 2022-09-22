@@ -2,8 +2,8 @@ import React from "react";
 
 const ClubTypeSelector = () => {
   return (
-    <div className='w-25 h-100'>
-      <h1>Club Types</h1>
+    <div className='w-100 h-100 d-flex align-items-center justify-content-start gap-3'>
+      <h1 className='p-2 border'>Club Types</h1>
       <div>
         <input type='checkbox' name='' id='' className='me-2' />
         <label htmlFor=''>
