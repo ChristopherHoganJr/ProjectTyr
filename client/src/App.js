@@ -1,4 +1,5 @@
-import logo from "./logo.svg";
+import { Routes, Route } from "react-router-dom";
+
 import "./App.css";
 
 // components
@@ -6,12 +7,16 @@ import Navbar from "./components/Navbar";
 
 // pages
 import Home from "./pages/Home";
+import CarClubs from "./pages/CarClubs";
 
 function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <Navbar />
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/carclubs" element={<CarClubs />} />
+      </Routes>
     </div>
   );
 }

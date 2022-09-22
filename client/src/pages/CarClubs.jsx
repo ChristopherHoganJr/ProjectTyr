@@ -1,61 +1,34 @@
 import React from "react";
+import styled from "styled-components";
 
 // components
 import ClubTypeSelector from "../components/CarClubs/ClubTypeSelector";
+import ClubSliderItem from "../components/CarClubs/ClubSliderItem";
 
 const CarClubs = () => {
   return (
     <>
-      <div className='pt-4'>
-        <div className='container'>
-          <div className='row h-50'>
-            <div className='col d-flex'>
+      <div className="pt-4">
+        <div className="container">
+          <div className="row h-50">
+            <div className="col d-flex">
               <ClubTypeSelector />
-              <div className='w-75 h-100 bg-light d-flex gap-3 overflow-auto'>
-                <div className={styles.clubSliderCard}>
-                  <img
-                    src='https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2015/03/Camaro_Six_Badge-626x382.jpg'
-                    alt=''
-                    className={styles.clubImgSelector}
-                  />
-                </div>
-                <div className={styles.clubSliderCard}>
-                  <img
-                    src='https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2015/03/Camaro_Six_Badge-626x382.jpg'
-                    alt=''
-                    className={styles.clubImgSelector}
-                  />
-                </div>
-                <div className={styles.clubSliderCard}>
-                  <img
-                    src='https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2015/03/Camaro_Six_Badge-626x382.jpg'
-                    alt=''
-                    className={styles.clubImgSelector}
-                  />
-                </div>
-                <div className={styles.clubSliderCard}>
-                  <img
-                    src='https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2015/03/Camaro_Six_Badge-626x382.jpg'
-                    alt=''
-                    className={styles.clubImgSelector}
-                  />
-                </div>
-                <div className={styles.clubSliderCard}>
-                  <img
-                    src='https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2015/03/Camaro_Six_Badge-626x382.jpg'
-                    alt=''
-                    className={styles.clubImgSelector}
-                  />
-                </div>
+              <div className="w-75 h-100 bg-light d-flex gap-3 overflow-auto">
+                <ClubSliderItem />
+                <ClubSliderItem />
+                <ClubSliderItem />
+                <ClubSliderItem />
+                <ClubSliderItem />
+                <ClubSliderItem />
               </div>
             </div>
           </div>
-          <div className='row h-50 mt-5'>
-            <div className='col'>
-              <table className='table'>
+          <div className="row h-50 mt-5">
+            <div className="col">
+              <table className="table">
                 <tbody>
                   <tr>
-                    <th scope='row'>
+                    <th scope="row">
                       <h4>Club Name:</h4>
                     </th>
                     <td>
@@ -68,9 +41,9 @@ const CarClubs = () => {
                     </th>
                     <td>
                       <img
-                        src='https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2015/03/Camaro_Six_Badge-626x382.jpg'
-                        alt=''
-                        className={styles.clubImgSelector}
+                        src="https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2015/03/Camaro_Six_Badge-626x382.jpg"
+                        alt=""
+                        style={{ width: "200px" }}
                       />
                     </td>
                   </tr>
@@ -83,8 +56,8 @@ const CarClubs = () => {
                     </td>
                   </tr>
                   <tr>
-                    <th colSpan='2'>
-                      <h4 className='text-center'>--- Car Requirements ---</h4>
+                    <th colSpan="2">
+                      <h4 className="text-center">--- Car Requirements ---</h4>
                     </th>
                   </tr>
                   <tr>
@@ -130,11 +103,11 @@ const CarClubs = () => {
                 </tbody>
               </table>
             </div>
-            <div className='col'>
-              <div className='d-flex justify-content-start align-items-center'>
+            <div className="col">
+              <div className="d-flex justify-content-start align-items-center">
                 <h2>Next Meet</h2>
-                <h4 className='ms-3'>
-                  <a href='#'>Fenrir Monthly Meet</a>
+                <h4 className="ms-3">
+                  <a href="#">Fenrir Monthly Meet</a>
                 </h4>
               </div>
               <div>
@@ -156,59 +129,14 @@ const CarClubs = () => {
               </div>
             </div>
           </div>
-          <div className='row mt-5'>
-            <div className='col'>
-              <h3 className='text-center'>Club Pictures</h3>
-              <div className='d-flex flex-wrap gap-3'>
+          <div className="row mt-5">
+            <div className="col">
+              <h3 className="text-center">Club Pictures</h3>
+              <div className="d-flex flex-wrap gap-3">
                 <img
-                  src='https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2015/03/Camaro_Six_Badge-626x382.jpg'
-                  alt=''
-                  className={styles.clubImgSelector}
-                />
-                <img
-                  src='https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2015/03/Camaro_Six_Badge-626x382.jpg'
-                  alt=''
-                  className={styles.clubImgSelector}
-                />
-                <img
-                  src='https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2015/03/Camaro_Six_Badge-626x382.jpg'
-                  alt=''
-                  className={styles.clubImgSelector}
-                />
-                <img
-                  src='https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2015/03/Camaro_Six_Badge-626x382.jpg'
-                  alt=''
-                  className={styles.clubImgSelector}
-                />
-                <img
-                  src='https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2015/03/Camaro_Six_Badge-626x382.jpg'
-                  alt=''
-                  className={styles.clubImgSelector}
-                />
-                <img
-                  src='https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2015/03/Camaro_Six_Badge-626x382.jpg'
-                  alt=''
-                  className={styles.clubImgSelector}
-                />
-                <img
-                  src='https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2015/03/Camaro_Six_Badge-626x382.jpg'
-                  alt=''
-                  className={styles.clubImgSelector}
-                />
-                <img
-                  src='https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2015/03/Camaro_Six_Badge-626x382.jpg'
-                  alt=''
-                  className={styles.clubImgSelector}
-                />
-                <img
-                  src='https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2015/03/Camaro_Six_Badge-626x382.jpg'
-                  alt=''
-                  className={styles.clubImgSelector}
-                />
-                <img
-                  src='https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2015/03/Camaro_Six_Badge-626x382.jpg'
-                  alt=''
-                  className={styles.clubImgSelector}
+                  src="https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2015/03/Camaro_Six_Badge-626x382.jpg"
+                  alt=""
+                  style={{ width: "200px" }}
                 />
               </div>
             </div>
