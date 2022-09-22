@@ -1,14 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-const ClubFilterItem = () => {
+const ClubFilterItem = ({ carClub }) => {
   return (
-    <StyledClubSliderItem>
-      <StyledClubSliderItemImg
-        src='https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2015/03/Camaro_Six_Badge-626x382.jpg'
-        alt=''
-      />
-    </StyledClubSliderItem>
+    <Link to={`/carclubs/${carClub._id}`}>
+      <StyledClubSliderItem>
+        <StyledClubSliderItemImg
+          src={carClub.clubLogo}
+          alt={`${carClub.clubName} logo`}
+        />
+      </StyledClubSliderItem>
+    </Link>
   );
 };
 
