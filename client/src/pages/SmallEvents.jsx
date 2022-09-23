@@ -8,6 +8,7 @@ import EventAbout from "../components/SmallEvents/EventAbout";
 
 const SmallEvents = () => {
   const [smallEvents, setSmallEvents] = useState(null);
+  const [mapEvent, setMapEvent] = useState(0);
 
   useEffect(() => {
     axios
@@ -19,15 +20,15 @@ const SmallEvents = () => {
   console.log(smallEvents);
 
   return (
-    <div className="mt-3">
-      <div className="container">
+    <div className='mt-3'>
+      <div className='container'>
         <h1>Events</h1>
-        <div className="row">
-          <div className="col">
-            <EventScroll events={smallEvents} />
+        <div className='row'>
+          <div className='col'>
+            <EventScroll events={smallEvents} setMapEvent={setMapEvent} />
           </div>
-          <div className="col">
-            <EventMap />
+          <div className='col'>
+            <EventMap mapEvent={mapEvent} smallEvents={smallEvents} />
             <EventAbout />
           </div>
         </div>

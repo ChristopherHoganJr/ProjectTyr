@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const EventScrollItem = ({ event }) => {
+const EventScrollItem = ({ event, setMapEvent, eventIdx }) => {
   const [club, setClub] = useState(null);
 
   useEffect(() => {
@@ -11,11 +11,17 @@ const EventScrollItem = ({ event }) => {
       .catch((err) => console.log(err));
   }, []);
 
+  const setMapData = (key) => {
+    setMapEvent(key);
+  };
+
   return (
-    <div className="text-start border p-3">
-      <h2>Meet Name: {event.eventName}</h2>
-      {club ? <h3>Hosted By: {club.clubName}</h3> : <h3>Loading</h3>}
-      <h4>Address: {event.meetAddress}</h4>
+    <div
+      className='text-start border p-3'
+      onClick={(e) => setMapData(eventIdx)}>
+      <h3>{event.eventName}</h3>
+      {club ? <h4>Hosted By: {club.clubName}</h4> : <h4>Hosted By: Loading</h4>}
+      <h5>{event.meetAddress}</h5>
     </div>
   );
 };

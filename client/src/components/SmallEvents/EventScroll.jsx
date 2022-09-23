@@ -4,14 +4,21 @@ import axios from "axios";
 // components
 import EventScrollItem from "./EventScrollItem";
 
-const EventScroll = ({ events }) => {
+const EventScroll = ({ events, setMapEvent }) => {
   return (
     <div>
       <h2>Event Scrolls</h2>
-      <div className="d-flex flex-column gap-3 overflow-auto h-75">
+      <div className='d-flex flex-column gap-3 overflow-auto h-75'>
         {events ? (
-          events.map((event) => {
-            return <EventScrollItem key={event._id} event={event} />;
+          events.map((event, idx) => {
+            return (
+              <EventScrollItem
+                key={event._id}
+                eventIdx={idx}
+                event={event}
+                setMapEvent={setMapEvent}
+              />
+            );
           })
         ) : (
           <p>Loading</p>
