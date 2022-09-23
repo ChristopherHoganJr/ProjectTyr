@@ -19,22 +19,26 @@ const SmallEvents = () => {
 
   console.log(smallEvents);
 
-  return (
-    <div className='mt-3'>
-      <div className='container'>
-        <h1>Events</h1>
-        <div className='row'>
-          <div className='col'>
-            <EventScroll events={smallEvents} setMapEvent={setMapEvent} />
-          </div>
-          <div className='col'>
-            <EventMap mapEvent={mapEvent} smallEvents={smallEvents} />
-            <EventAbout />
+  if (smallEvents) {
+    return (
+      <div className="mt-3">
+        <div className="container">
+          <h1>Events</h1>
+          <div className="row">
+            <div className="col">
+              <EventScroll events={smallEvents} setMapEvent={setMapEvent} />
+            </div>
+            <div className="col">
+              <EventMap mapEvent={mapEvent} smallEvents={smallEvents} />
+              <EventAbout />
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return <p>Loading</p>;
+  }
 };
 
 export default SmallEvents;
