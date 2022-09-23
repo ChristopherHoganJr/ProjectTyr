@@ -8,9 +8,12 @@ import ClubFilterItem from "../components/CarClubs/ClubFIlterItem";
 
 const CarClubs = () => {
   const [carClubs, setCarClubs] = useState(null);
-  const [clubFilter, setClubFilter] = useState("");
+  const [clubFilter, setClubFilter] = useState(false);
 
-  let ilter = carClubs.filter((club) => club.clubType.inclues(""));
+  // let ilter = carClubs.filter((club) => club.clubType.inclues(""));
+  const filterClubs = (filterType) => {
+    carClubs.filter((club) => club.clubType.inclues(`${filterType}`));
+  };
 
   useEffect(() => {
     axios
@@ -25,13 +28,13 @@ const CarClubs = () => {
         <div className='container'>
           <div className='row h-50'>
             <div className='col d-flex'>
-              {/* <ClubTypeSelector setClubFilter={setClubFilter} /> */}
+              <ClubTypeSelector setClubFilter={setClubFilter} />
             </div>
           </div>
           <div className='row h-50 mt-5'>
             <div className='col d-flex flex-wrap gap-3 justify-content-center'>
-              {clubFilter ? (
-                clubFilter.map((carClub) => {
+              {carClubs ? (
+                carClubs.map((carClub) => {
                   return <ClubFilterItem key={carClub._id} carClub={carClub} />;
                 })
               ) : (
